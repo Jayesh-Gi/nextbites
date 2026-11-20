@@ -1,24 +1,21 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "./components/NavBar";
 
 export const metadata: Metadata = {
-  title: "NextBites",
-  description: "Discover delicious recipes",
+  title: "NextBites | Discover Delicious Recipes",
+  description:
+    "Explore delicious recipes, search your favourites, and learn how to make them with NextBites.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body>
-        <NavBar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
